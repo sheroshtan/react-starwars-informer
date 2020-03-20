@@ -1,6 +1,12 @@
+.list-group-item {
+    border: 1px solid transparent;
+}
 .item-list .list-group-item {
     cursor: pointer;
+    border-left: 4px solid transparent;
+    border-top-color: rgba(0,0,0,0.125);
+    border-bottom-color: rgba(0,0,0,0.125);
 }
 .item-list .list-group-item:hover {
-    background-color: #444;
+    border-left-color: #444;
 }
