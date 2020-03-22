@@ -13,6 +13,7 @@
 .random-planet .planet-description .list-group-item {
     padding-top: .50rem;
     padding-bottom: .50rem;
+    border-top: 1px solid #c1c1c1;
 }
 .random-planet .planet-description,
 .random-planet .planet-description h4 {
