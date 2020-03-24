@@ -1,0 +1,16 @@
+.error-indicator {
+    margin: 0 auto;
+    text-align: center;
+}
+.error-indicator img {
+    margin-bottom: 10px;
+}
+.error-indicator .boom {
+    font-size: 30px;
+    font-weight: bold;
+    color: #953143;
+}
+.error-indicator span {
+    display: block;
+    text-align: center;
+}

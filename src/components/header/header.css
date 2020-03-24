@@ -5,6 +5,7 @@
     padding: 18px 12px;
     align-items: center;
     border-bottom: 1px solid #c1c1c1;
+    box-shadow: 0 3px 20px rgba(134, 134, 134, 0.1);
 }
 .header ul {
     margin-left: 20px;
