@@ -1,11 +1,12 @@
+.item-list {
+    margin-bottom: 30px;
+}
 .list-group-item {
-    border: 1px solid transparent;
+    border: 1px solid rgba(0,0,0,0.125);
 }
 .item-list .list-group-item {
     cursor: pointer;
-    border-left: 4px solid transparent;
-    border-top-color: rgba(0,0,0,0.125);
-    border-bottom-color: rgba(0,0,0,0.125);
+    border-left: 4px solid rgba(0,0,0,0.125);
 }
 .item-list .list-group-item:hover {
     border-left-color: #444;
