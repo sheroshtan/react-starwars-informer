@@ -76,8 +76,10 @@
             id: this._extractId(person),
             name: person.name,
             gender: person.gender,
-            birthYear: person.birthYear,
-            eyeColor: person.eyeColor
+            height: person.height,
+            weight: person.mass,
+            birthYear: person.birth_year,
+            eyeColor: person.eye_color
         }
     }
 }

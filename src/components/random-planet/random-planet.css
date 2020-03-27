@@ -2,8 +2,8 @@
     display: flex;
     align-items: center;
     padding: 1rem;
-    border-bottom: 1px solid #c1c1c1;
-    margin-bottom: 30px;
+    border: 1px solid rgba(0,0,0,0.125);
+    margin: 30px 0;
 }
 .random-planet .planet-image {
     width: 150px;
@@ -11,11 +11,11 @@
     border-radius: 10px;
 }
 .random-planet .planet-description .list-group-item {
-    padding-top: .50rem;
-    padding-bottom: .50rem;
-    border-top: 1px solid #c1c1c1;
+    padding: 0.40rem 1rem;
 }
-.random-planet .planet-description,
-.random-planet .planet-description h4 {
-    margin-left: 10px;
+.random-planet .planet-description {
+    margin-left: 1.25rem;
+}
+.planet-description h4 {
+    margin-bottom: 10px;
 }

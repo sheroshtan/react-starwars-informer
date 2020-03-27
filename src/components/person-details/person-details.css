@@ -2,6 +2,10 @@
     display: flex;
     flex-direction: row;
     padding: 1rem;
+    align-items: center;
+}
+.person-details h4 {
+    margin-bottom: 10px;
 }
 .person-details .person-image {
     width: 30%;
