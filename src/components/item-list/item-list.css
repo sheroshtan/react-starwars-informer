@@ -1,13 +1,28 @@
 .item-list {
     margin-bottom: 30px;
+    border: 1px solid rgba(0,0,0,0.125);
 }
 .list-group-item {
-    border: 1px solid rgba(0,0,0,0.125);
+    border: none;
 }
 .item-list .list-group-item {
     cursor: pointer;
-    border-left: 4px solid rgba(0,0,0,0.125);
+    position: relative;
 }
-.item-list .list-group-item:hover {
-    border-left-color: #444;
+.item-list .list-group-item::before {
+    content: "";
+    display: inline-block;
+    opacity: 0;
+    height: 100%;
+    width: 4px;
+    position: absolute;
+    background-color: #444;
+    left: -1px;
+    top: 0;
+}
+.item-list .list-group-item:hover::before {
+    opacity: 1;
+}
+.item-list .list-group-item + .list-group-item{
+   border-top: 1px solid rgba(0,0,0,0.125);
 }

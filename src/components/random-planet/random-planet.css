@@ -10,12 +10,12 @@
     height: 150px;
     border-radius: 10px;
 }
+.planet-description h4 {
+    margin-bottom: 10px;
+}
 .random-planet .planet-description .list-group-item {
     padding: 0.40rem 1rem;
 }
 .random-planet .planet-description {
     margin-left: 1.25rem;
-}
-.planet-description h4 {
-    margin-bottom: 10px;
 }
