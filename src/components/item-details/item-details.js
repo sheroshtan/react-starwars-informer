@@ -4,6 +4,18 @@ import SwapiService from "../../services/swapi-service";
 import Spinner from "../spinner/spinner";
 import ErrorButton from "../error-button/error-button";
 
+const Record = ({ item, field, label }) => {
+
+    return (
+        <li className="list-group-item">
+            <span className="term">{ label }: </span>
+            <span>{ item[field] }</span>
+        </li>
+    )
+};
+
+export { Record };
+
 export default class ItemDetails extends Component {
     swapiService = new SwapiService();
 
@@ -44,12 +56,12 @@ export default class ItemDetails extends Component {
 
     render() {
         const { item, image } = this.state;
-        console.log(item);
-        console.log('image', image);
+
         if(!item) {
             return <span>No item in item-details</span>
         }
-        const { id, name, gender, birthYear, eyeColor, height, weight } = item;
+
+        console.log(item);
 
        /* const spinner = loading ? <Spinner/> : null;
         const content = !loading ? <Person item={item} image={image}/> : null;*/
@@ -63,28 +75,13 @@ export default class ItemDetails extends Component {
                      className="person-image"/>
 
                 <div className="card-body">
-                    <h4>{name}</h4>
+                    <h4>{item.name}</h4>
                     <ul>
-                        <li className="list-group-item">
-                            <span className="term">Gender: </span>
-                            <span>{gender}</span>
-                        </li>
-                        <li className="list-group-item">
-                            <span className="term">Height: </span>
-                            <span>{height}</span>
-                        </li>
-                        <li className="list-group-item">
-                            <span className="term">Weight: </span>
-                            <span>{weight}</span>
-                        </li>
-                        <li className="list-group-item">
-                            <span className="term">Birth year: </span>
-                            <span>{birthYear}</span>
-                        </li>
-                        <li className="list-group-item">
-                            <span className="term">Eye Color: </span>
-                            <span>{eyeColor}</span>
-                        </li>
+                        {
+                            React.Children.map(this.props.children, (child) => {
+                                return React.cloneElement(child, { item });
+                            })
+                        }
                     </ul>
                     <ErrorButton/>
                 </div>
